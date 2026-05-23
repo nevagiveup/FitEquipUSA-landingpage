@@ -157,6 +157,19 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+    <script type="module">
+  import { logEvent } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-analytics.js";
+
+  const trackButton = document.getElementById("trackButton");
+
+  trackButton.addEventListener("click", () => {
+    logEvent(analytics, 'button_clicked', { 
+      button_name: 'TrackButton'
+    });
+    console.log("Event logged: button_clicked");
+  });
+</script>
+
 </head>
 <body>
     <header>
