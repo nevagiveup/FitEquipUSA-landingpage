@@ -136,6 +136,27 @@ console.log("Event logged: button_clicked");
     });
   });
 </script>
+    // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBEW7RSKS6_BI0PZV_TwMklGoSvNsnWreQ",
+  authDomain: "myfirebasedemoapp-193bd.firebaseapp.com",
+  projectId: "myfirebasedemoapp-193bd",
+  storageBucket: "myfirebasedemoapp-193bd.firebasestorage.app",
+  messagingSenderId: "345422297832",
+  appId: "1:345422297832:web:72bd3f7a2d68d4cb12275d",
+  measurementId: "G-TKRRX4KB2D"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 </head>
 <body>
     <header>
